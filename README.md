@@ -173,6 +173,19 @@ If you'd like to contribute:
 
 ---
 
+## Citation
+If you use this repository in your work, please cite as:
+```
+@article{qlime2024,
+  title={Q-LIME Pi: Quantum LIME for Text Explanations},
+  author={Nelson Colon Vargas},
+  year={2024},
+  url={https://github.com/nelabdiel/qlime}
+}
+```
+
+---
+
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
