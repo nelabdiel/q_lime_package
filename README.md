@@ -1,5 +1,7 @@
 # Q-LIME Pi: Quantum LIME Explanation Library
 
+(Under development)
+
 ## Overview
 Q-LIME (Quantum Local Interpretable Model-agnostic Explanations) is a Python package designed to generate interpretable explanations for machine learning models using a quantum-inspired approach. It builds on the principles of LIME (Local Interpretable Model-agnostic Explanations) but incorporates quantum mechanisms for flipping features and evaluating their contributions to model predictions.
 
