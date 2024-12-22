@@ -159,6 +159,10 @@ Highlights the top-N contributing words in a text using HTML.
 
 ---
 
+For more details about the project look at the exploratory work on: https://github.com/nelabdiel/qlime
+
+---
+
 ## Contributing
 If you'd like to contribute:
 1. Fork the repository.
