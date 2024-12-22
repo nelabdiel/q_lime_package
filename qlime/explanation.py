@@ -26,22 +26,25 @@ def measure_and_map_to_classical(features, flip_index=None):
     bin_string = f"{measured_state:0{len(features)}b}"
     return [int(bit) for bit in bin_string]
 
-def explain(vector, weights):
+def explain(vector, weights, full_superposition=False):
     """
-    Compute feature contributions for a given vector using quantum LIME.
-    
+    Compute feature contributions for a given vector using Q-LIME.
+
     Args:
-        vector (np.array): The binary feature vector (1-D array).
+        vector (np.array): Binary feature vector (1-D array).
         weights (np.array): Logistic regression weights (1-D array).
-    
+        full_superposition (bool): If True, consider both 1 -> 0 and 0 -> 1 flips.
+                                    Defaults to False for computational efficiency.
+
     Returns:
         np.array: Feature contributions (1-D array).
     """
     original_pred = classical_classifier(vector, weights)
     contributions = np.zeros(len(vector))
 
-    for i, val in enumerate(vector):
-        if val == 1:  # Flip only active features
+    for i in range(len(vector)):
+        if vector[i] == 1 or full_superposition:
+            # Flip bit i (1 -> 0 for active features, and 0 -> 1 if in full mode)
             new_vec = measure_and_map_to_classical(vector, flip_index=i)
             new_pred = classical_classifier(new_vec, weights)
             contributions[i] = original_pred - new_pred
