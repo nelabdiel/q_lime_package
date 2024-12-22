@@ -29,7 +29,7 @@ You can install the package from source:
 pip install .
 ```
 
-Or, if hosted on a repository like PyPI or GitHub, you can install directly:
+(Coming soon) Or, if hosted on a repository like PyPI or GitHub, you can install directly:
 
 ```bash
 pip install qlime
