@@ -39,6 +39,10 @@ def explain(vector, weights, full_superposition=False):
     Returns:
         np.array: Feature contributions (1-D array).
     """
+    # Convert sparse matrix to dense array if needed
+    if hasattr(vector, "toarray"):
+        vector = vector.toarray()[0]
+        
     original_pred = classical_classifier(vector, weights)
     contributions = np.zeros(len(vector))
 
@@ -50,3 +54,4 @@ def explain(vector, weights, full_superposition=False):
             contributions[i] = original_pred - new_pred
 
     return contributions
+
