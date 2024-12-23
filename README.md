@@ -1,4 +1,4 @@
-# Q-LIME Pi: Quantum LIME Explanation Library
+# Q-LIME $\pi$: Quantum LIME Explanation Library
 
 (Under development)
 
@@ -177,7 +177,7 @@ If you'd like to contribute:
 If you use this repository in your work, please cite as:
 ```
 @article{qlime2024,
-  title={Q-LIME Pi: Quantum LIME for Text Explanations},
+  title={Q-LIME $\pi$: Quantum LIME for Text Explanations},
   author={Nelson Colon Vargas},
   year={2024},
   url={https://github.com/nelabdiel/qlime}
